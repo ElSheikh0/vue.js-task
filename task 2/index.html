@@ -1,0 +1,159 @@
+<html>
+
+<head>
+    <link href="css.css" rel="stylesheet">
+</head>
+
+
+
+<body>
+    <div id="el">
+        <div class="centerplease">
+            تعرف على قرآنك
+        </div>
+        <br>
+
+        <div class="content">
+            <div>
+                <input type="checkbox" id="question1" name="q" class="questions">
+                <div class="plus">~</div>
+                <label for="question1" class="question">
+                    س1: ماهو القرآن الكريم ؟
+                </label>
+                <div class="answers">
+                    {{message}}</div>
+            </div>
+
+
+
+            <div>
+                <div class="plus">~</div>
+                <h4 class="question" @click="items2.push({ message2 })">
+                    س2 : ما عدد سور القرآن الكريم ؟
+                </h4>
+                <div class="answrs">
+                    <ul>
+                        <li v-for="item2 in items2" :key="item2.message2">
+                            {{ item2.message2 }}</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div>
+                <div class="plus">~</div>
+                <h4 class="question" @click="items3.push({ message3 })">
+                    س3 : ما عدد السور المكيه ؟
+                </h4>
+                <div class="answrs">
+                    <ul>
+                        <li v-for="item3 in items3" :key="item3.message3">
+                            {{ item3.message3 }}</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div>
+                <div class="plus">~</div>
+                <h4 class="question" @click="items4.push({ message4 })">
+                    س4: ما عدد السور المدنية ؟
+                </h4>
+                <div class="answrs">
+                    <ul>
+                        <li v-for="item4 in items4" :key="item4.message4">
+                            {{ item4.message4 }}</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div>
+                <div class="plus">~</div>
+                <h4 class="question" @click="items5.push({ message5 })">
+                    س5 : ما هى السور المكية ؟
+                </h4>
+                <div class="answrs">
+                    <ul>
+                        <li v-for="item5 in items5">
+                            {{ item5.message5 }}</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div>
+                <div class="plus">~</div>
+                <h4 class="question" @click="items6.push({ message6 })">
+                    س6: ما السور المدنية ؟
+                </h4>
+                <div class="answrs">
+                    <ul>
+                        <li v-for="item6 in items6">
+                            {{ item6.message6 }}</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div>
+                <div class="plus">~</div>
+                <h4 class="question" @click="items7.push({ message7 })">
+                    س7 : ما الفرق بين السور المكية والسور المدنية ؟
+                </h4>
+                <div class="answrs">
+                    <ul>
+                        <li v-for="item7 in items7">
+                            {{ item7.message7 }}</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div>
+                <div class="plus">~</div>
+                <h4 class="question" @click="c++">
+                    س8 : ما عدد آيات القرآن الكريم ؟
+                </h4>
+                <div class="answrs">
+                    <ul>
+                        <li v-if="c%2==0">
+                            {{ message8 }}</li>
+                    </ul>
+                </div>
+            </div>
+
+
+        </div>
+        <script src="vue.js"></script>
+        <script>
+            var vm = new Vue({
+                el: '#el',
+                data: {
+                    items: [],
+                    message: 'ج : القرآن الكريم هو : كتاب الله المنزل على النبى صلى الله عليه وسلم ',
+                    items2: [],
+                    message2: 'ج : عدد سور القرآن الكريم : مائة وأربع عشرة سورة :114',
+                    items3: [],
+                    message3: 'ج : عدد السور المكية ست وثمانون سورة :86',
+                    items4: [],
+                    message4: 'ج : عدد السور المدنية ثمان وعشرون سورة :28',
+                    items5: [],
+                    message5: 'ج : القول الراجح : أن السور المكية هى التى نزلت قبل الهجرة ولو فى غير مكة',
+                    items6: [],
+                    message6: 'ج : السور المدنية هى التى نزلت بعد الهجرة ولو فى غير المدنية',
+                    items7: [],
+                    message7: 'ج : السور المكية نزلت بالوعد والوعيد ، والتبشير والتحذير و السور المدنية نزلت بالأحكام التشريعية غالباً',
+                    items8: [],
+                    message8: 'ج : عددآيات القرآن الكريم:ستة آلاف ومائتان وست وثلاثون: 6236 على الأرجح',
+                    c: '1',
+
+
+                },
+                methods: {
+
+
+                },
+
+            });
+        </script>
+
+</body>
+
+
+</html>
