@@ -1,0 +1,76 @@
+body {
+    background-color: rgb(26, 58, 77);
+    height: 800px;
+    width: 300px;
+    text-align: center;
+    margin: auto;
+}
+
+.salary {
+    margin-bottom: 3px;
+    margin-top: 160px;
+    background-color: rgb(97, 161, 188);
+    padding-top: 20px;
+    padding-block-end: 35px;
+    border: 1px solid;
+    text-align: center;
+    width: 300px;
+}
+
+.p1 {
+    background-color: rgb(142, 193, 109);
+    width: 200px;
+    padding: 10px;
+    text-align: left;
+    margin: 0px;
+    height: auto;
+    margin-block-start: 0px;
+    margin-bottom: 10px;
+    margin-inline-end: 10px;
+    margin-inline-start: 40px;
+    color: white;
+}
+
+h3 {
+    color: white;
+    font-family: 'Brush Script MT', cursive;
+    text-align: center;
+    size: 15px;
+    font-size: 47px;
+    margin-block-start: 1px;
+    margin-block-end: 1px;
+    -webkit-font-smoothing: antialiased;
+    font-weight: normal;
+    line-height: 1;
+    text-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+h4 {
+    float: left;
+    margin-inline-start: 60px;
+    margin-block-start: 1px;
+    margin-block-end: 0px;
+    color: white;
+    font-weight: bold;
+}
+
+h6 {
+    float: right;
+    margin-inline-end: 90px;
+    margin-block-start: 5px;
+    margin-block-end: 3px;
+    color: white;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+h7 {
+    float: right;
+    margin-inline-end: 7px;
+    color: white;
+    font-weight: bold;
+}
+
+.red {
+    background-color: rgb(227, 88, 133);
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<htm lang="en" dir="ltr">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Learn Vue</title>
+        <link href="css.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    </head>
+
+    <body>
+        <div id="e" class="back">
+            <div class="salary">
+                <h3>Seiuices</h3>
+
+                <span v-on:click="Active(services[0])">
+                        <p class="p1" :class="{red :check1 } " :class="{sum=400:check1}" @click="check1=!check1">
+                            Web Development
+                            <h7>$300.00</h7>
+                        </p>
+                    </span>
+
+                <span v-on:click="Active(services[1])">
+                <p  class="p1" :class="{red:check2}" @click="check2=!check2">
+                    Design
+                    <h7>$400.00</h7>
+                </p>
+                    </span>
+                <span v-on:click="Active(services[2])">
+                <p class="p1 " :class="{red:check3}" @click="check3=!check3">
+                    Integration
+                    <h7>$250.00</h7>
+                </p>
+                    </span>
+                <span v-on:click="Active(services[3])">
+                <p class="p1" :class="{red:check4}" @click="check4=!check4">
+                    Training
+                    <h7>$220.00</h7>
+                </p>
+                    </span>
+
+                <hr style="border-top:0.00001px solid; color:rgba(255, 255, 255, 0.5); width: 85%;margin-top: 15px;">
+                <h4>Total:</h4>
+                <h6>$ {{sum()}}.00</h6>
+            </div>
+        </div>
+        <script src="vue.js"></script>
+        <script>
+            var vm = new Vue({
+                el: '#e',
+                data: {
+                    check1: true,
+                    check2: true,
+                    check3: true,
+                    check4: true,
+
+                    services: [{
+
+                        price: 300,
+                        check: false,
+                    }, {
+
+                        price: 400,
+                        check: false,
+                    }, {
+
+                        price: 250,
+                        check: false,
+                    }, {
+
+                        price: 220,
+                        check: false,
+                    }]
+
+                },
+                methods: {
+
+                    Active: function(s) {
+                        s.check = !s.check;
+                    },
+                    sum: function() {
+                        var sum = 0;
+
+                        this.services.forEach(function(s) {
+                            if (s.check) {
+                                sum += s.price;
+                            }
+                        });
+
+                        return sum;
+                    }
+                },
+            });
+        </script>
+
+
+
+
+    </body>
+</htm>
